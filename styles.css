@@ -1,5 +1,5 @@
 /* ==========================================
-   PENGATURAN UTAMA & VARIABEL CSS (CUSTOM PROPERTIES)
+   PENGATURAN UTAMA & VARIABEL CSS
    ================================---------- */
 :root {
   --aksen: #0066cc;
@@ -21,13 +21,32 @@ body {
   background-color: #e5e7eb;
   color: var(--teks);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-/* Kelas bantu untuk menyembunyikan teks label secara visual tetapi terbaca screen reader */
+/* Bingkai Simulasi Layar Ponsel (360x640px) */
+.phone-frame {
+  width: 360px;
+  height: 640px;
+  background-color: #ffffff;
+  border: 8px solid #1f2937;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.screen-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-normal);
+  padding-bottom: 70px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -40,7 +59,7 @@ body {
 }
 
 /* ==========================================
-   TAMPILAN UTAMA & NAVIGASI BAWAH
+   HEADER & NAVIGASI BAWAH
    ================================---------- */
 header {
   display: flex;
@@ -49,7 +68,6 @@ header {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--abu-garis);
   margin-bottom: var(--spacing-normal);
-  width: 100%;
 }
 
 .header-title {
@@ -207,7 +225,7 @@ header {
 }
 
 /* ==========================================
-   PENCARIAN, FILTER, DAN DAFTAR PRODUK
+   PENCARIAN, FILTER, DAN PRODUK
    ================================---------- */
 .search-bar {
   width: 100%;
@@ -255,9 +273,6 @@ header {
   font-weight: 500;
 }
 
-/* ==========================================
-   TRANSAKSI & KERANJANG
-   ================================---------- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -330,8 +345,5 @@ header {
 }
 
 footer {
-  margin-top: 20px;
-  font-size: 0.75rem;
-  color: #6b7280;
-  text-align: center;
+  display: none; /* Disembunyikan karena sudah di dalam bingkai ponsel */
 }

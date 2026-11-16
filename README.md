@@ -1,19 +1,16 @@
 # Kasir Pintar Warung Warga
 
-Aplikasi web seluler (*mobile-first*) yang dirancang untuk membantu pemilik warung kelontong tradisional dalam mengelola pencatatan transaksi penjualan harian, pemantauan stok barang, serta rekapitulasi omzet toko secara praktis dan interaktif.
+Aplikasi web seluler (*mobile-first*) untuk membantu pemilik warung mengelola pencatatan transaksi penjualan harian dan pemantauan stok barang.
 
 ## Fitur Utama
-- **Navigasi Hub-and-Spoke**: Beranda bertindak sebagai pusat (*hub*) yang terhubung langsung ke halaman fungsional lainnya.
-- **Simulasi 3 Layar Utama**: 
-  - **Beranda**: Menampilkan sapaan pengguna, omzet harian, statistik ringkas, serta peringatan stok hampir habis.
-  - **Kelola Produk**: Manajemen daftar stok barang lengkap dengan kolom pencarian dan filter kategori.
-  - **Transaksi Kasir**: Katalog produk dan keranjang belanja aktif dengan tombol aksi penyelesaian transaksi.
-- **Navigasi Bawah (*Bottom Navigation*)**: Memungkinkan pengguna beralih antarhalaman secara mulus dan intuitif.
+- **Navigasi Hub-and-Spoke**: Beranda terhubung langsung ke halaman fungsional lainnya.
+- **Simulasi 3 Layar**: Beranda, Kelola Produk, dan Transaksi Kasir.
+- **Navigasi Bawah**: Memungkinkan pengguna beralih antarhalaman dengan mulus.
 
 ## Struktur Proyek
 ```text
 kasir-warung-warga/
-├── index.html     # Struktur dokumen HTML semantik untuk antarmuka ponsel
-├── styles.css     # Pengaturan gaya, variabel CSS, dan tata letak responsif
-├── script.js      # Logika interaktivitas perpindahan tampilan (View Switching)
+├── index.html     # Struktur dokumen HTML semantik
+├── styles.css     # Pengaturan gaya dan variabel CSS
+├── script.js      # Logika interaktivitas
 └── README.md      # Dokumentasi proyek

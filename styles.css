@@ -1,6 +1,6 @@
 /* ==========================================
-   PENGATURAN UTAMA & VARIABEL CSS (CUSTOM PROPERTIES)
-   ================================---------- */
+   VARIABEL CSS & PENGATURAN UTAMA
+   ========================================== */
 :root {
   --aksen: #0066cc;
   --abu-bg: #f4f4f5;
@@ -22,12 +22,33 @@ body {
   color: var(--teks);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
-/* Kelas bantu untuk menyembunyikan teks label secara visual tetapi terbaca screen reader */
+/* Bingkai Ponsel */
+.phone-frame {
+  width: 360px;
+  height: 640px;
+  background-color: #ffffff;
+  border: 8px solid #1f2937;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.screen-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-normal);
+  padding-bottom: 80px; /* Ruang agar konten tidak tertutup navigasi bawah */
+}
+
+/* Kelas aksesibilitas untuk menyembunyikan label visual */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -40,8 +61,8 @@ body {
 }
 
 /* ==========================================
-   TAMPILAN UTAMA & NAVIGASI BAWAH
-   ================================---------- */
+   HEADER & NAVIGASI
+   ========================================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +70,6 @@ header {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--abu-garis);
   margin-bottom: var(--spacing-normal);
-  width: 100%;
 }
 
 .header-title {
@@ -69,6 +89,11 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-normal);
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .view {
@@ -91,6 +116,7 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 0 4px;
+  z-index: 10;
 }
 
 .nav-item {
@@ -123,20 +149,18 @@ header {
 }
 
 /* ==========================================
-   KOMPONEN BERANDA & KARTU INFORMASI
-   ================================---------- */
-.greeting-box {
-  margin-bottom: var(--spacing-normal);
-}
-
-.greeting-box h1 {
+   KOMPONEN HALAMAN BERANDA
+   ========================================== */
+h1 {
   font-size: 1.2rem;
   font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.greeting-box p {
+.sub-text {
   font-size: 0.85rem;
   color: #6b7280;
+  margin-bottom: var(--spacing-normal);
 }
 
 .omzet-card {
@@ -150,7 +174,7 @@ header {
   align-items: center;
 }
 
-.omzet-card h2 {
+.card-label {
   font-size: 0.8rem;
   color: #4b5563;
 }
@@ -207,8 +231,8 @@ header {
 }
 
 /* ==========================================
-   PENCARIAN, FILTER, DAN DAFTAR PRODUK
-   ================================---------- */
+   PRODUK & TRANSAKSI
+   ========================================== */
 .search-bar {
   width: 100%;
   padding: 10px;
@@ -255,9 +279,6 @@ header {
   font-weight: 500;
 }
 
-/* ==========================================
-   TRANSAKSI & KERANJANG
-   ================================---------- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -330,7 +351,8 @@ header {
 }
 
 footer {
-  margin-top: 20px;
+  margin-top: 24px;
+  margin-bottom: 10px;
   font-size: 0.75rem;
   color: #6b7280;
   text-align: center;

@@ -5,10 +5,10 @@ Aplikasi web seluler (*mobile-first*) yang dirancang untuk membantu pemilik waru
 ## Fitur Utama
 - **Navigasi Hub-and-Spoke**: Beranda bertindak sebagai pusat (*hub*) yang terhubung langsung ke halaman fungsional lainnya.
 - **Simulasi 3 Layar Utama**: 
-  - **Beranda**: Menampilkan sapaan pengguna, omzet harian (`Rp1.250.000`), statistik ringkas, serta peringatan stok hampir habis.
-  - **Kelola Produk**: Manajemen daftar stok barang lengkap dengan kolom pencarian dan filter kategori (Makanan, Minuman).
+  - **Beranda**: Menampilkan sapaan pengguna, omzet harian, statistik ringkas, serta peringatan stok hampir habis.
+  - **Kelola Produk**: Manajemen daftar stok barang lengkap dengan kolom pencarian dan filter kategori.
   - **Transaksi Kasir**: Katalog produk dan keranjang belanja aktif dengan tombol aksi penyelesaian transaksi.
-- **Navigasi Bawah (*Bottom Navigation*)**: Memungkinkan pengguna beralih antar-halaman secara mulus dan intuitif.
+- **Navigasi Bawah (*Bottom Navigation*)**: Memungkinkan pengguna beralih antarhalaman secara mulus dan intuitif.
 
 ## Struktur Proyek
 ```text

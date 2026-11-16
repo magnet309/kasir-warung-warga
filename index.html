@@ -7,17 +7,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <div class="phone-frame">
+    
+    <!-- KONTEN UTAMA BERDASARKAN LAYAR WIREFRAME -->
     <div class="screen-content">
+
+      <!-- Halaman 1: Beranda (Hub Utama) -->
       <div id="view-beranda" class="view active">
         <header>
           <div class="header-title">Kasir Pintar Warung Warga</div>
           <div style="font-size:0.8rem; background:#e5e7eb; padding:2px 6px; border-radius:4px;">Notif</div>
         </header>
+
         <div class="greeting-box">
           <h2>Halo Pak Kumis</h2>
           <p>semangat berjualan hari ini</p>
         </div>
+
         <div class="omzet-card">
           <div>
             <h3>Omzet Harian</h3>
@@ -25,11 +32,13 @@
           </div>
           <div style="font-size: 1.5rem;">📈</div>
         </div>
+
         <div class="quick-stats">
           <div class="stat-box"><strong>40</strong><br>transaksi</div>
           <div class="stat-box"><strong>3</strong><br>stok menipis</div>
           <div class="stat-box"><strong>Aman</strong><br>keuangan</div>
         </div>
+
         <div class="alert-section">
           <div class="alert-header">
             <span>Stok Hampir Habis</span>
@@ -41,37 +50,47 @@
           </div>
         </div>
       </div>
+
+      <!-- Halaman 2: Kelola Produk -->
       <div id="view-produk" class="view">
         <header>
           <button class="btn-back" onclick="switchView('view-beranda')">back</button>
           <div class="header-title">Kelola Produk</div>
           <button class="btn-tambah-top">+</button>
         </header>
+
         <input type="text" class="search-bar" placeholder="cari produk...">
+
         <div class="filter-chips">
           <div class="chip active">Semua</div>
           <div class="chip">Makanan</div>
           <div class="chip">Minuman</div>
         </div>
+
         <div class="product-stock-list">
           <div class="stock-card">Stok Indomie</div>
           <div class="stock-card">Stok akua</div>
           <div class="stock-card">Stok gula</div>
         </div>
       </div>
+
+      <!-- Halaman 3: Transaksi -->
       <div id="view-transaksi" class="view">
         <header>
           <button class="btn-back" onclick="switchView('view-beranda')">back</button>
           <div class="header-title">Transaksi</div>
           <div></div>
         </header>
+
         <input type="text" class="search-bar" placeholder="cari produk...">
+
         <div class="product-grid">
           <div class="product-placeholder"></div>
           <div class="product-placeholder"></div>
           <div class="product-placeholder"></div>
           <div class="product-placeholder"></div>
         </div>
+
         <div class="cart-section">
           <div class="cart-header">
             <span>Keranjang Belanja</span>
@@ -82,9 +101,13 @@
             <span>Rp 6.000</span>
           </div>
         </div>
+
         <button class="btn-action-primary">Selesaikan Transaksi</button>
       </div>
+
     </div>
+
+    <!-- Bottom Navigation Bar (Menu Bawah) -->
     <nav class="bottom-nav">
       <button class="nav-item active" onclick="switchView('view-beranda')" id="nav-beranda">
         <div class="nav-icon"></div>
@@ -107,7 +130,9 @@
         <span>Akun</span>
       </button>
     </nav>
+
   </div>
+
   <script src="script.js" defer></script>
 </body>
 </html>

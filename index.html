@@ -8,132 +8,130 @@
 </head>
 <body>
 
-  <!-- Komponen 1: Header Utama -->
-  <header>
-    <div class="header-title">Kasir Pintar Warung Warga</div>
-    <div class="badge-notif">Notif</div>
-  </header>
+  <div class="phone-frame">
+    
+    <!-- KONTEN UTAMA BERDASARKAN LAYAR WIREFRAME -->
+    <div class="screen-content">
 
-  <!-- Komponen 2: Konten Utama / Main -->
-  <main>
-    <!-- Halaman Beranda -->
-    <section id="view-beranda" class="view active">
-      <div class="greeting-box">
-        <h1>Halo Pak Kumis</h1>
-        <p>semangat berjualan hari ini</p>
-      </div>
+      <!-- Halaman 1: Beranda (Hub Utama) -->
+      <div id="view-beranda" class="view active">
+        <header>
+          <div class="header-title">Kasir Pintar Warung Warga</div>
+          <div style="font-size:0.8rem; background:#e5e7eb; padding:2px 6px; border-radius:4px;">Notif</div>
+        </header>
 
-      <div class="omzet-card">
-        <div>
-          <h2>Omzet Harian</h2>
-          <div class="nominal">Rp1.250.000</div>
+        <div class="greeting-box">
+          <h2>Halo Pak Kumis</h2>
+          <p>semangat berjualan hari ini</p>
         </div>
-        <div class="icon-stat">📈</div>
-      </div>
 
-      <div class="quick-stats">
-        <div class="stat-box"><strong>40</strong><br>transaksi</div>
-        <div class="stat-box"><strong>3</strong><br>stok menipis</div>
-        <div class="stat-box"><strong>Aman</strong><br>keuangan</div>
-      </div>
-
-      <div class="alert-section">
-        <div class="alert-header">
-          <span>Stok Hampir Habis</span>
-          <button type="button" class="btn-link" id="btn-to-produk">Lihat semua &gt;</button>
+        <div class="omzet-card">
+          <div>
+            <h3>Omzet Harian</h3>
+            <div class="nominal">Rp1.250.000</div>
+          </div>
+          <div style="font-size: 1.5rem;">📈</div>
         </div>
-        <div class="alert-item">
-          <span>Indomie Goreng</span>
-          <span>stok: 2 pcs</span>
+
+        <div class="quick-stats">
+          <div class="stat-box"><strong>40</strong><br>transaksi</div>
+          <div class="stat-box"><strong>3</strong><br>stok menipis</div>
+          <div class="stat-box"><strong>Aman</strong><br>keuangan</div>
         </div>
-      </div>
-    </section>
 
-    <!-- Halaman Kelola Produk -->
-    <section id="view-produk" class="view">
-      <div class="sub-header">
-        <button type="button" class="btn-back" id="to-beranda-1">Back</button>
-        <h2>Kelola Produk</h2>
-        <button type="button" class="btn-tambah-top">+</button>
-      </div>
-
-      <label for="cari-produk-produk" class="sr-only">Cari Produk</label>
-      <input type="text" id="cari-produk-produk" class="search-bar" placeholder="cari produk...">
-
-      <div class="filter-chips">
-        <button type="button" class="chip active">Semua</button>
-        <button type="button" class="chip">Makanan</button>
-        <button type="button" class="chip">Minuman</button>
-      </div>
-
-      <div class="product-stock-list">
-        <div class="stock-card">Stok Indomie</div>
-        <div class="stock-card">Stok akua</div>
-        <div class="stock-card">Stok gula</div>
-      </div>
-    </section>
-
-    <!-- Halaman Transaksi -->
-    <section id="view-transaksi" class="view">
-      <div class="sub-header">
-        <button type="button" class="btn-back" id="to-beranda-2">Back</button>
-        <h2>Transaksi</h2>
-        <div></div>
-      </div>
-
-      <label for="cari-produk-transaksi" class="sr-only">Cari Produk Transaksi</label>
-      <input type="text" id="cari-produk-transaksi" class="search-bar" placeholder="cari produk...">
-
-      <div class="product-grid">
-        <div class="product-placeholder"></div>
-        <div class="product-placeholder"></div>
-        <div class="product-placeholder"></div>
-        <div class="product-placeholder"></div>
-      </div>
-
-      <div class="cart-section">
-        <div class="cart-header">
-          <span>Keranjang Belanja</span>
-          <button type="button" class="btn-link text-red">Hapus semua</button>
-        </div>
-        <div class="cart-item">
-          <span>indomie goreng · 2</span>
-          <span>Rp 6.000</span>
+        <div class="alert-section">
+          <div class="alert-header">
+            <span>Stok Hampir Habis</span>
+            <span onclick="switchView('view-produk')" style="cursor:pointer;">Lihat semua &gt;</span>
+          </div>
+          <div class="alert-item">
+            <span>Indomie Goreng</span>
+            <span>stok: 2 pcs</span>
+          </div>
         </div>
       </div>
 
-      <button type="button" class="btn-action-primary">Selesaikan Transaksi</button>
-    </section>
-  </main>
+      <!-- Halaman 2: Kelola Produk -->
+      <div id="view-produk" class="view">
+        <header>
+          <button class="btn-back" onclick="switchView('view-beranda')">back</button>
+          <div class="header-title">Kelola Produk</div>
+          <button class="btn-tambah-top">+</button>
+        </header>
 
-  <!-- Komponen 3: Navigasi Bawah / Nav -->
-  <nav class="bottom-nav" aria-label="Navigasi Utama">
-    <button type="button" class="nav-item active" id="nav-beranda">
-      <div class="nav-icon"></div>
-      <span>Beranda</span>
-    </button>
-    <button type="button" class="nav-item" id="nav-produk">
-      <div class="nav-icon"></div>
-      <span>Produk</span>
-    </button>
-    <button type="button" class="nav-item" id="nav-transaksi">
-      <div class="nav-icon"></div>
-      <span>Transaksi</span>
-    </button>
-    <button type="button" class="nav-item" id="nav-laporan">
-      <div class="nav-icon"></div>
-      <span>Laporan</span>
-    </button>
-    <button type="button" class="nav-item" id="nav-akun">
-      <div class="nav-icon"></div>
-      <span>Akun</span>
-    </button>
-  </nav>
+        <input type="text" class="search-bar" placeholder="cari produk...">
 
-  <!-- Komponen 4: Footer -->
-  <footer>
-    <p>&copy; 2026 Kasir Pintar Warung Warga</p>
-  </footer>
+        <div class="filter-chips">
+          <div class="chip active">Semua</div>
+          <div class="chip">Makanan</div>
+          <div class="chip">Minuman</div>
+        </div>
+
+        <div class="product-stock-list">
+          <div class="stock-card">Stok Indomie</div>
+          <div class="stock-card">Stok akua</div>
+          <div class="stock-card">Stok gula</div>
+        </div>
+      </div>
+
+      <!-- Halaman 3: Transaksi -->
+      <div id="view-transaksi" class="view">
+        <header>
+          <button class="btn-back" onclick="switchView('view-beranda')">back</button>
+          <div class="header-title">Transaksi</div>
+          <div></div>
+        </header>
+
+        <input type="text" class="search-bar" placeholder="cari produk...">
+
+        <div class="product-grid">
+          <div class="product-placeholder"></div>
+          <div class="product-placeholder"></div>
+          <div class="product-placeholder"></div>
+          <div class="product-placeholder"></div>
+        </div>
+
+        <div class="cart-section">
+          <div class="cart-header">
+            <span>Keranjang Belanja</span>
+            <span>Hapus semua</span>
+          </div>
+          <div class="cart-item">
+            <span>indomie goreng · 2</span>
+            <span>Rp 6.000</span>
+          </div>
+        </div>
+
+        <button class="btn-action-primary">Selesaikan Transaksi</button>
+      </div>
+
+    </div>
+
+    <!-- Bottom Navigation Bar (Menu Bawah) -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" onclick="switchView('view-beranda')" id="nav-beranda">
+        <div class="nav-icon"></div>
+        <span>Beranda</span>
+      </button>
+      <button class="nav-item" onclick="switchView('view-produk')" id="nav-produk">
+        <div class="nav-icon"></div>
+        <span>Produk</span>
+      </button>
+      <button class="nav-item" onclick="switchView('view-transaksi')" id="nav-transaksi">
+        <div class="nav-icon"></div>
+        <span>Transaksi</span>
+      </button>
+      <button class="nav-item" onclick="alert('Fitur Laporan')">
+        <div class="nav-icon"></div>
+        <span>Laporan</span>
+      </button>
+      <button class="nav-item" onclick="alert('Fitur Akun')">
+        <div class="nav-icon"></div>
+        <span>Akun</span>
+      </button>
+    </nav>
+
+  </div>
 
   <script src="script.js" defer></script>
 </body>
